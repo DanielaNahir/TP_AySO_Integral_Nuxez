@@ -11,7 +11,8 @@
   tasks:
     - include_role:
         name: TP_INI
-    
+        name: Alta_Usuarios_Nuxez
+        name: Instalar-tools_Nuxez
     - name: "Otra tarea"
       debug:
         msg: "Despues de la ejecucion del rol"

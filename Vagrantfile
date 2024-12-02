@@ -81,7 +81,7 @@ Vagrant.configure("2") do |config|
       echo "192.168.56.4 primero" | sudo tee -a /etc/hosts
 
       #para que no pida clave
-      ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+      ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_rsa
       ##cat ~/.ssh/id_rsa.pub | sshpass -p 'vagrant' ssh -o StrictHostKeyChecking=no vagrant@primero "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 
       #sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@primero "echo '$(cat ~/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"

@@ -1,0 +1,12 @@
+---
+# tasks file for TP_INI
+
+- name: "Hacer grupos usar sudo"
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers
+    state: present
+    line: '%{{ item }} ALL=(ALL) NOPASSWD:ALL'
+    validate: 'visudo -cf %s'
+  become: true
+  loop: "{{ grupos }}"
+

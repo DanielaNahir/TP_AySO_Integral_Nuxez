@@ -1,8 +1,24 @@
 ---
 # tasks file for TP_INI
 
- - name: "Rol: TP_INI - Grupo: {{ Nombre_Grupo }}"
-   debug:
-     msg: "Inicio de tareas dentro del Rol: TP_INI"
+ - name: "Crear directorio"
+   ansible.builtin.file:
+     path: "/tmp/Grupo"
+     state: directory 
+     owner: vagrant
+     mode: "0755"
+
+ - name: "Crear txt file"
+   ansible.builtin.file:
+     path: "/tmp/Grupo/datos.txt"
+     state: touch
+     mode: "0644"
+
+ - name: "Crear txt con plantilla "
+   ansible.builtin.template:
+      src: "../templates/template_01.j2"
+      dest: "/tmp/Grupo/datos.txt"
+      
+
 
 

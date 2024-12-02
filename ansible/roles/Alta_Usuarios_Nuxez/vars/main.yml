@@ -1,0 +1,24 @@
+---
+# vars file for TP_INI
+
+grupos:
+  - G_R1
+  - G_R2
+  - G_R3
+  - G_R4
+  - G_R5
+  - G_R6
+
+usuarios:
+  - name: R1_Nuxez
+    groups: G_R1
+  - name: R2_Nuxez
+    groups: G_R2
+  - name: R3_Nuxez
+    groups: G_R3
+  - name: R4_Nuxez
+    groups: G_R4
+  - name: R5_Nuxez
+    groups: G_R5
+  - name: R6_Nuxez
+    groups: G_R6

@@ -4,6 +4,7 @@ n
 p
 
 
+
 t
 8e
 w
@@ -12,6 +13,7 @@ EOF
 sudo fdisk /dev/sdd<<EOF
 n
 p
+
 
 
 t
@@ -61,4 +63,4 @@ echo "/dev/vg_datos/lv_workareas /work ext4 defaults 0 0" | sudo tee -a /etc/fst
 echo "/dev/vg_temp/lv_swap none swap sw 0 0" | sudo tee -a /etc/fstab
 
 sudo mount -a
-sudo syatemctl restart docker
+sudo systemctl restart docker

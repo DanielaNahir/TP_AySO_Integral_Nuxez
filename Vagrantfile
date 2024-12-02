@@ -47,7 +47,8 @@ Vagrant.configure("2") do |config|
       git clone https://github.com/upszot/UTN-FRA_SO_Ansible.git
       git clone https://github.com/upszot/UTN-FRA_SO_Docker.git
       git clone https://github.com/DanielaNahir/TP_AySO_Integral_Nuxez.git
-
+      cd TP_AySO_Integral_Nuxez/
+      find . -type f -name "*.sh" | xargs chmod +x
     SHELL
     end
     
